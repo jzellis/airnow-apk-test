@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import SdkList from '../components/SdkList'
+import SdkList from '../components/SdkList';
 
 
 

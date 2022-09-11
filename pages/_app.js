@@ -1,10 +1,13 @@
 import '../styles/globals.css'
-import { AppWrapper } from '../components/AppWrapper'
-
+import { useState } from 'react';
+import { StateProvider } from '../components/StateProvider';
 function MyApp({ Component, pageProps }) {
-  // <AppWrapper>
-    return <Component {...pageProps} />
-    // </AppWrapper>
+
+  const state = pageProps;
+  const [theState] = useState(state);
+  return <StateProvider value={theState}>
+    <Component {...pageProps} />
+    </StateProvider>
 }
 
 export default MyApp
